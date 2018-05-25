@@ -1,0 +1,28 @@
+Data needed
+  string - neo addres owner
+  string - poll tittle
+  int - vote limit
+  string - options
+  int - deadline for vote
+  boolean - status of the pool (able or not able to vote)
+  int - votescounter
+
+create a class that detect a new vote on the poll
+declare a public poll, for now, we dont will add whitelist poll function
+
+create a public class with that args for a new poll
+  options, tittle, votelimit, deadline and implement
+  owner = msg.sender
+  status = true   // put the poll as active
+  numvotes = 0    // stablish poll count as 0
+
+create a public class for vote that returns a bool with the logic:
+  if the msg.sender != owner OR status of the pool != true, return FALSE
+  else
+    votes counter +1
+    call to the class newVote with the argument choice
+  if votelimit is setted, check if the the numVotes is > votelimit call the class endPoll
+  return true;
+
+ class endPoll check if sender != owner and return false
+    then change status of pool to false.

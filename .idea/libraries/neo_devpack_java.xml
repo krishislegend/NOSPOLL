@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="neo-devpack-java">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../neo-devpack-java.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
