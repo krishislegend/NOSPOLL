@@ -45,11 +45,11 @@
     padding: 15px 45px;
 }
 
-.createPoll, .accessPoll {
+.createPoll, .accessPoll, .searchPoll {
     .title, .search {
         margin: 0 100px 20px;
     }
     .poll-option {
-        margin-bottom: 20px;
+        margin: 20px 0 35px;
     }
 }
