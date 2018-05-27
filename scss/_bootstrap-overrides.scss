@@ -45,8 +45,8 @@
     padding: 15px 45px;
 }
 
-.createPoll {
-    .title {
+.createPoll, .accessPoll {
+    .title, .search {
         margin: 0 100px 20px;
     }
     .poll-option {
