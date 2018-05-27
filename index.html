@@ -41,7 +41,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#login">Login</a>
+              <a class="nav-link js-scroll-trigger" href="#profile">Account</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#features">Features</a>
@@ -60,7 +60,7 @@
           <div class="col-lg-7 my-auto">
             <div class="header-content mx-auto">
               <h1 class="mb-5">Secure Online Voting System</h1>
-              <a href="#login" class="btn btn-outline btn-xl js-scroll-trigger">Start Now for Free!</a>
+              <a href="#profile" class="btn btn-outline btn-xl js-scroll-trigger">Start Now for Free!</a>
             </div>
           </div>
           <div class="col-lg-5 my-auto">
@@ -82,30 +82,17 @@
       </div>
     </header>
 
-    <section class="download bg-primary text-center" id="login">
+    <section class="download bg-primary profile text-center" id="profile">
       <div class="container">
         <div class="row">
           <div class="col-md-8 mx-auto">
             <h2 class="section-heading">Discover what all the buzz is about!</h2>
-            <form class="form-horizontal">
-              <fieldset>
-              <!-- Text input-->
               <div class="form-group">
-                <input id="address" name="address" type="text" placeholder="Address" class="form-control input-md">
-                <!-- <span class="help-block">help</span>   -->
+                  <a href="#create"><button id="login" name="login" class="btn btn-success">CREATE POLL</button></a>
               </div>
-              <!-- Password input-->
               <div class="form-group">
-                  <input id="key" name="key" type="password" placeholder="Key" class="form-control input-md">
-                  <!-- <span class="help-block">help</span> -->
+                <a href="#access"><button id="cancel" name="cancel" class="btn btn-primary">ACCESS POLL</button></a>
               </div>
-              <!-- Button (Double) -->
-              <div class="form-group">
-                  <button id="login" name="login" class="btn btn-success">LOGIN</button>
-                  <button id="cancel" name="cancel" class="btn btn-danger">CANCEL</button>
-              </div>
-              </fieldset>
-              </form>              
           </div>
         </div>
       </div>
@@ -178,7 +165,7 @@
       <div class="cta-content">
         <div class="container">
           <h2>Stop waiting.<br>Start building.</h2>
-          <a href="#login" class="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
+          <a href="#profile" class="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
         </div>
       </div>
       <div class="overlay"></div>
@@ -209,19 +196,44 @@
       </div>
     </section>
 
+    <section class="download createPoll text-center" id="create">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <h2 class="section-heading">Create Poll!</h2>
+              <fieldset>
+              <!-- Text input-->
+              <div class="form-group title">
+                <input id="pollTitle" name="title" type="text" placeholder="Title" class="form-control input-md">
+              </div>
+              <div class="poll-option">
+                <div class="radio">
+                  <label for="radios-0">
+                    <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                    Option one
+                  </label>
+                </div>
+                <div class="radio">
+                  <label for="radios-1">
+                    <input type="radio" name="radios" id="radios-1" value="2">
+                    Option two
+                  </label>
+                </div>
+              </div>
+              <!-- Button (Double) -->
+              <div class="form-group">
+                  <button id="createPoll" name="createPoll" class="btn btn-success">Publish</button> 
+                <button id="cancelPoll" name="cancelPoll" class="btn btn-danger">Cancel</button>
+              </div>
+              </fieldset>           
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <div class="container">
         <p>&copy; 2018</p>
-        <!-- <ul class="list-inline">
-          <li class="list-inline-item">
-            <a href="#">Privacy</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">Terms</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">FAQ</a>
-          </li> -->
         </ul>
       </div>
     </footer>
