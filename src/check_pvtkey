@@ -1,0 +1,13 @@
+
+//add this to first screen code for check the pvtkey
+
+try
+{
+    Neo.Wallets.Wallet.GetPrivateKeyFromWIF("textfieldPVTKEY");
+    Console.WriteLine("WIF is correct");
+    
+}
+catch (Exception)
+{
+    Console.WriteLine("WIF is wrong");
+}
