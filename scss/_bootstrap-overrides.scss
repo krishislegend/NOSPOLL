@@ -1,0 +1,55 @@
+// Bootstrap overrides for this template
+.bg-primary {
+    background: $theme-primary;
+    background: -webkit-linear-gradient($theme-primary, darken($theme-primary, 5%));
+    background: linear-gradient($theme-primary, darken($theme-primary, 5%));
+}
+
+.text-primary {
+    color: $theme-primary;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.btn-outline {
+    color: white;
+    border: 1px solid;
+    border-color: white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: white;
+        border-color: $theme-primary;
+        background-color: $theme-primary;
+    }
+}
+
+.btn {
+    margin: 0 10px;
+    min-width: 150px;
+    @include alt-font;
+}
+
+.profile .btn {
+    min-width: 300px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+.btn-xl {
+    font-size: 11px;
+    padding: 15px 45px;
+}
+
+.createPoll, .accessPoll, .searchPoll {
+    .title, .search {
+        margin: 0 100px 20px;
+    }
+    .poll-option {
+        margin: 20px 0 35px;
+    }
+}
