@@ -11,20 +11,38 @@ public class PollContract extends SmartContract{
   private boolean votingEn;     // Is Active?
   private int voteLimit;        // How many votes we got now?
   private int voteCast;         // How many votes can we got?
+  private String keyA;          // Option A selected for VOTE
+  private String KeyB;          // Option B selected for VOTE
+  private int Value;            // Total of votes of A or B
+  private String key;
   
   // Check if there is a contract scryptHash
   // If pollContract Variable is not null, then start the voting
   
   if(pollContract != null){
     // GET THE STORED DATA
-    votingEn = Storage.Get(Storage.CurrentContext, new byte[] {0}); //HOW TO SELECT THE DATA WE WANT TO GET????
-    voteLimit = Storage.Get(Storage.CurrentContext, new byte[] {0}); //HOW TO SELECT THE DATA WE WANT TO GET????
-    voteCast = Storage.Get(Storage.CurrentContext, new byte[] {0}); //HOW TO SELECT THE DATA WE WANT TO GET????
+    votingEn = Storage.Get(Storage.CurrentContext, "votingEn");
+    voteLimit = Storage.Get(Storage.CurrentContext, "voteLimit");
+    voteCast = Storage.Get(Storage.CurrentContext, "voteCast");
+    
+    //Check the option voted(A or B)
+    if(checkbox1.isSelected){
+       Value = Storage.Get(Storage.CurrentContext, "keyA"); 
+       Value = Value+1;
+       key = "keyA";
+    }
+    if(checkbox2.isSelected){
+       Value = Storage.Get(Storage.CurrentContext, "keyB"); 
+       Value = Value+1;
+       key = "keyB";
+    }
+    
+    
     
     if(votingEn && voteLimit<=voteCast){
       account.claimGas;     //FROM NOS API
       if(neoAddress.GetBalance(GASasset) != 0){
-        Storage.Put(Storage.CurrentContext, key, value);
+        Storage.Put(Storage.CurrentContext, key, Value);
         result = "Vote Registered";
         return result;
       }else{
